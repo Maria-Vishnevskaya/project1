@@ -1,0 +1,2 @@
+-- 1 задание Список логинов курьеров с количеством их заказов в статусе «В доставке» (поле inDelivery = true).
+SELECT c.login, COUNT(*) AS orders_in_delivery FROM "Couriers" c JOIN "Orders" AS o ON c.id = o."courierId" WHERE o."inDelivery" = TRUE GROUP BY c.login;
